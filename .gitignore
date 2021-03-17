@@ -1,0 +1,6 @@
+# Ignore the node_modules directory
+node_modules/
+# Ignore the build directory
+/dist
+# Ignore IDE specific files
+.idea/
