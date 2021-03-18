@@ -1,6 +1,7 @@
 const { src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 
 function liveReload() {
@@ -21,13 +22,23 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
+function scripts() {
+    return src('src/js/main.js')
+        .pipe(rename({ extname: '.min.js'}))
+        .pipe(dest('src/js'))
+        .pipe(browserSync.stream())
+}
+
 function watching() {
     watch(['src/scss/**/*.scss'], styles);
+    watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
     watch(['src/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
+exports.scripts = scripts;
 exports.watching = watching;
 exports.liveReload = liveReload;
+
 
 exports.default = parallel(liveReload, watching);
