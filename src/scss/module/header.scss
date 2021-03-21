@@ -1,0 +1,14 @@
+h1 {
+    color: cornflowerblue;
+    @include mediaXS {
+        color: darkkhaki;
+    }
+}
+
+h2 {
+    color: aquamarine;
+}
+
+body {
+    background-color: black;
+}

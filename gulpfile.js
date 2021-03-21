@@ -1,4 +1,5 @@
 const { src, dest, watch, parallel, series } = require('gulp');
+const include = require('gulp-include')
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
@@ -16,8 +17,15 @@ function liveReload() {
     });
 }
 
+function html() {
+    return src('src/html/*.html')
+        .pipe(include())
+        .pipe(dest('src/'))
+        .pipe(browserSync.stream())
+}
+
 function styles() {
-    return src('src/scss/style.scss')
+    return src('src/scss/main.scss')
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -46,6 +54,7 @@ function images() {
 
 function scripts() {
     return src('src/js/main.js')
+        .pipe(include())
         .pipe(rename({ extname: '.min.js'}))
         .pipe(uglify())
         .pipe(dest('src/js'))
@@ -55,7 +64,7 @@ function scripts() {
 function watching() {
     watch(['src/scss/**/*.scss'], styles);
     watch(['src/js/**/*.js', '!src/js/main.min.js'], scripts);
-    watch(['src/*.html']).on('change', browserSync.reload);
+    watch(['src/html/**/*.html'], html);
 }
 
 function cleanDist() {
@@ -72,6 +81,7 @@ function build() {
         .pipe(dest('dist'))
 }
 
+exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
@@ -81,4 +91,4 @@ exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, build, images);
 
 
-exports.default = parallel(styles, scripts ,liveReload, watching);
+exports.default = parallel(html, styles, scripts ,liveReload, watching);
