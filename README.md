@@ -1,11 +1,12 @@
 # gulp-start-frontend
-##installation
+### installation
 
 ```
-        npm i
+        + download repository
+        + npm i
 ```
 
-## include html
+### include html
 
 ```html
         <!DOCTYPE html>
