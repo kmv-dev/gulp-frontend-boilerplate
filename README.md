@@ -1,4 +1,9 @@
 # gulp-start-frontend
+##installation
+
+```
+        npm i
+```
 
 ## include html
 
