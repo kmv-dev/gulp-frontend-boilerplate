@@ -1,9 +1,9 @@
-.header {
-    border-bottom: 1px dashed #ffffff;
+.footer {
+    border-top: 1px dashed #ffffff;
     flex: 0 0 auto;
     &__title {
-        font-size: 16px;
         font-family: sans-serif;
+        font-size: 16px;
         color: white;
         text-align: center;
     }

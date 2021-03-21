@@ -1,0 +1,52 @@
+.main {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    margin: 0 auto;
+}
+
+@keyframes change_fill {
+    0% {
+        fill: #ffffff;
+    }
+    40% {
+        fill: #DA251C;
+    }
+    55% {
+        fill: #D5713F;
+    }
+    75% {
+        fill: #1bceb1;
+    }
+    90% {
+        fill: #49549E;
+    }
+    95% {
+        fill: #1bce4f;
+    }
+    100% {
+        fill: #49549E;
+    }
+}
+
+.main__banner {
+    display: flex;
+    align-items: center;
+}
+
+.main__banner svg {
+    & g {
+        animation: change_fill 1s, popup 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+.main__title {
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-left: 15px;
+    margin-top: 55px;
+}
