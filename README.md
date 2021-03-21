@@ -38,3 +38,8 @@ run "gulp build" in terminal
 + html
 + js
 + css
+
+### compression img
++ .jpg
++ .svg
++ .png
