@@ -46,13 +46,14 @@ run "gulp build" in terminal
 
 ### media scss
 setting media query permissions **src/scss/variables/media.scss**
-$mediaXS: 0px ;
-$mediaSM: 768px;
-$mediaMD: 1024px;
-$mediaLG: 1440px;
-$mediaXM: 1600px;
-$mediaXL: 1920px;
-$mediaMAX: 999999px;
+
++ $mediaXS: 0px ;
++ $mediaSM: 768px;
++ $mediaMD: 1024px;
++ $mediaLG: 1440px;
++ $mediaXM: 1600px;
++ $mediaXL: 1920px;
++ $mediaMAX: 999999px;
 
 ```scss
     &__div {
