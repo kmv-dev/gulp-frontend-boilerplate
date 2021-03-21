@@ -11,7 +11,7 @@
             <main class="content">
               content
             </main>
-            <!--=include ./module/header.html -->
+            <!--=include ./module/footer.html -->
         </body>
         </html>
 ```
