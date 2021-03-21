@@ -35,6 +35,6 @@ run "gulp build" in terminal
 ```
 
 ### live reload
-+html
-+js
-+css
++ html
++ js
++ css
