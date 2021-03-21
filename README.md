@@ -45,6 +45,7 @@ run "gulp build" in terminal
 + .png
 
 ### media scss
+setting mixin/media **src/scss/mixin/media.scss**
 setting media query permissions **src/scss/variables/media.scss**
 
 + $mediaXS: 0px ;
