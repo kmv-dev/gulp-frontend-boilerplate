@@ -8,7 +8,12 @@
 ### Quick Start
 
 ```
-gulp in terminal
+run "gulp" in terminal
+```
+### build project
+
+```
+run "gulp build" in terminal
 ```
 
 ### include html
@@ -28,3 +33,8 @@ gulp in terminal
         </body>
         </html>
 ```
+
+### live reload
++html
++js
++css
