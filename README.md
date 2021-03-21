@@ -34,16 +34,6 @@ run "gulp build" in terminal
         </html>
 ```
 
-### live reload
-+ html
-+ js
-+ css
-
-### compression img
-+ .jpg
-+ .svg
-+ .png
-
 ### media scss
 setting mixin/media **src/scss/mixin/media.scss**
 setting media query permissions **src/scss/variables/media.scss**
@@ -66,3 +56,14 @@ setting media query permissions **src/scss/variables/media.scss**
         }
     }
 ```
+
+### live reload
++ html
++ js
++ css
+
+### compression img
++ .jpg
++ .svg
++ .png
+
