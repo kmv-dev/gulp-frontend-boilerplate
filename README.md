@@ -43,3 +43,16 @@ run "gulp build" in terminal
 + .jpg
 + .svg
 + .png
+
+### media css
+
+```scss
+    &__div {
+        width: 100px;
+        height: auto;
+        @include mediaXS {
+            //width: 30px;
+            //max-height: 50px;
+        }
+    }
+```
