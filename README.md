@@ -34,6 +34,11 @@ run "gulp build" in terminal
         </html>
 ```
 
+### url img
++ **scss** background-image: url('../assets/img/image.jpg');
++ **html** style="background-image: url('./assets/img/image.jpg')"
++ **img-tags** src="./assets/img/image.jpg"
+
 ### media scss
 setting mixin/media **src/scss/mixin/media.scss**
 
