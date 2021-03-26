@@ -1,10 +1,8 @@
 .footer {
-    border-top: 1px dashed #ffffff;
     flex: 0 0 auto;
+    background-color: white;
     &__title {
-        font-family: sans-serif;
         font-size: 16px;
-        color: white;
         text-align: center;
     }
 }

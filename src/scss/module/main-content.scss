@@ -34,6 +34,7 @@
 .main__banner {
     display: flex;
     align-items: center;
+    margin-bottom: 300px;
 }
 
 .main__banner svg {
@@ -44,9 +45,9 @@
 }
 
 .main__title {
-    font-size: 45px;
+    font-size: 25px;
     letter-spacing: 2px;
-    color: #ffffff;
     margin-left: 15px;
     margin-top: 55px;
+    color: whitesmoke;
 }
